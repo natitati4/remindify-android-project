@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Add TaskClass menu item -->
+    <item
+        android:id="@+id/actionAddLocation"
+        android:title="Add Location"
+        android:orderInCategory="100"
+        tools:ignore="AppCompatResource" />
+
+    <!-- Add User menu item -->
+    <item
+        android:id="@+id/actionProfile"
+        android:title="Account"
+        android:orderInCategory="200"
+        tools:ignore="AppCompatResource" />
+</menu>

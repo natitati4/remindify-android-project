@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/user_managment_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <ImageButton
+        android:id="@+id/btnAccountBack"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/selector_button_back_state"
+        />
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="Phone number"
+        android:id="@+id/etAccountPhoneNumber"/>
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="Username"
+        android:id="@+id/etAccountUsername"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="To change the password, log out and press the &quot;Forgot password&quot; button."
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:textSize="32sp"
+        android:text="Submit"
+        android:id="@+id/btnAccountSubmit"/>
+
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:id="@+id/btnAccountLogout"/>
+
+</LinearLayout>

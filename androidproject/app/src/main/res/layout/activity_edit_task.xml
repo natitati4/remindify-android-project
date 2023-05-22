@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/task_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAddTaskLocationName"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remindify"
+        android:textStyle="bold"
+        android:textSize="40sp"/>
+
+    <ImageButton
+        android:id="@+id/btnEditTaskBack"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/selector_button_back_state"
+        />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Edit Task" />
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="Name"
+        android:id="@+id/etEditTaskName"/>
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="Description"
+        android:id="@+id/etEditTaskDesc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvEditTaskDeadlineDate"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="40dp"
+            android:hint="Deadline date" />
+
+        <Button
+            android:id="@+id/btnEditTaskDeadlineDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvEditTaskDeadlineTime"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="40dp"
+            android:hint="Deadline time" />
+
+        <Button
+            android:id="@+id/btnEditTaskDeadlineTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select time" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="11sp"
+        android:text="Submit"
+        android:id="@+id/btnEditTaskSubmit"/>
+
+
+</LinearLayout>
