@@ -103,11 +103,19 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(getApplicationContext(), "Success! You signed up.", Toast.LENGTH_SHORT).show();
                 finish();
             }
-            else if (resultStr.equals("username already exists")) {
+            else if (resultStr.equals("username already exists"))
+            {
                 Toast.makeText(getApplicationContext(), "Username already exists.", Toast.LENGTH_SHORT).show();
             }
+
+            else if (resultStr.equals("Problem with connecting to MongoDB"))
+            {
+                Toast.makeText(getApplicationContext(), "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+            }
+
             // something unexpected failed
-            else {
+            else
+            {
                 Toast.makeText(getApplicationContext(), "Signup failed.", Toast.LENGTH_SHORT).show();
             }
         }

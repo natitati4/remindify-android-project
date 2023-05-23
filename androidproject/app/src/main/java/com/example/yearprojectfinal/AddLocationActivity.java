@@ -145,7 +145,7 @@ public class AddLocationActivity extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(getApplicationContext(),
-                            "Something went wrong saving the location. Try refreshing the app.",
+                            "Something went wrong saving the location. Try again later.",
                             Toast.LENGTH_SHORT).show();
                 }
 

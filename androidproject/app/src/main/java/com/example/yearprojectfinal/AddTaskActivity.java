@@ -217,7 +217,7 @@ public class AddTaskActivity extends AppCompatActivity implements View.OnClickLi
             else
             {
                 Toast.makeText(getApplicationContext(),
-                        "Something went wrong adding the task. Try refreshing the app.",Toast.LENGTH_SHORT).show();
+                        "Something went wrong adding the task. Try again later.",Toast.LENGTH_SHORT).show();
             }
         }
     }

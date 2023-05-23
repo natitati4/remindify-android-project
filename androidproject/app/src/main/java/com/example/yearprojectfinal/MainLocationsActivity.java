@@ -76,7 +76,7 @@ public class MainLocationsActivity extends AppCompatActivity implements OnMapRea
                 (activityName, connectedUsername);
 
         if (locationsList == null) {
-            Toast.makeText(this, "Server did not respond", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Server did not respond or problem with database", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -249,6 +249,11 @@ public class MainLocationsActivity extends AppCompatActivity implements OnMapRea
                     dialog.dismiss();
                 }
 
+                else if (resultStr.equals("Problem with connecting to MongoDB"))
+                {
+                    Toast.makeText(getApplicationContext(), "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+                }
+
                 else
                 {
                     Toast.makeText(getApplicationContext(),
@@ -365,7 +370,7 @@ public class MainLocationsActivity extends AppCompatActivity implements OnMapRea
 
         if (locationsList == null)
         {
-            Toast.makeText(this, "Server did not respond", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Server did not respond or problem with database", Toast.LENGTH_SHORT).show();
             return;
         }
 

@@ -3,6 +3,7 @@ package com.example.yearprojectfinal;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
@@ -73,7 +74,7 @@ public class UtilityClass
 
         // send data to server
         String resultStr = UtilityClass.sendAndReceive(UtilityClass.constructString(activityName, dataStrToSend));
-        if (resultStr.equals(""))
+        if (resultStr.equals("") || resultStr.equals("[\"Problem with connecting to MongoDB\"]"))
             return null;
 
         try

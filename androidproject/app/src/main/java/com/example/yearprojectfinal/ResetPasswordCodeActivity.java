@@ -102,6 +102,11 @@ public class ResetPasswordCodeActivity extends AppCompatActivity implements View
                 finish();
             }
 
+            else if (resultStr.equals("Problem with connecting to MongoDB"))
+            {
+                Toast.makeText(getApplicationContext(), "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+            }
+
             else
             {
                 Toast.makeText(getApplicationContext(),

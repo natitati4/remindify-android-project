@@ -173,6 +173,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 " try again or create a new account.",Toast.LENGTH_SHORT).show();
             }
 
+            else if (resultStr.equals("Problem with connecting to MongoDB"))
+            {
+                Toast.makeText(getApplicationContext(), "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+            }
+
             // something unexpected happened
             else
             {

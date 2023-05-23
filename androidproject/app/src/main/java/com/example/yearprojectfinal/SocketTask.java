@@ -22,6 +22,8 @@ public class SocketTask extends AsyncTask<String, Void, String>
 
     private final static String IP_ADDRESS = "192.168.1.218";
     private final static int PORT = 50001;
+    private final static int SOCKET_CONNECT_TIMEOUT = 20000;
+    private final static int SOCKET_RECEIVE_TIMEOUT = 3000;
 
     private Socket socket;
     private String sendingStr = "";
@@ -40,7 +42,7 @@ public class SocketTask extends AsyncTask<String, Void, String>
         {
             this.socket = new Socket();
             SocketAddress socketAddress = new InetSocketAddress(IP_ADDRESS, PORT);
-            this.socket.connect(socketAddress, 20000); // Set timeout to 20 seconds
+            this.socket.connect(socketAddress, SOCKET_CONNECT_TIMEOUT); // Set timeout to 15 seconds
             send(this.sendingStr);
             receive();
             this.socket.close();
@@ -85,7 +87,8 @@ public class SocketTask extends AsyncTask<String, Void, String>
     private void receive() throws IOException {
         ByteArrayOutputStream baos = null;
         InputStream inputStream = null;
-        socket.setSoTimeout(2100);
+        socket.setSoTimeout(SOCKET_RECEIVE_TIMEOUT);
+
         try
         {
             inputStream = socket.getInputStream();

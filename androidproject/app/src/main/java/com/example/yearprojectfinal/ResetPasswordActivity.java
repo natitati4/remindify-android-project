@@ -80,6 +80,11 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
                                 " Try again or create a new account.",Toast.LENGTH_SHORT).show();
             }
 
+            else if (resultStr.equals("Problem with connecting to MongoDB"))
+            {
+                Toast.makeText(getApplicationContext(), "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+            }
+
             else if (resultStr.equals(""))
             {
                 Toast.makeText(getApplicationContext(), "Something went wrong.",Toast.LENGTH_SHORT).show();

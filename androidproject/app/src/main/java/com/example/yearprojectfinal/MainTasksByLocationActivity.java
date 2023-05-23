@@ -247,6 +247,12 @@ public class MainTasksByLocationActivity extends AppCompatActivity {
             Toast.makeText(MainTasksByLocationActivity.this,
                     "Removed task: " + taskToDelete.getName(), Toast.LENGTH_LONG).show();
         }
+
+        else if (resultStr.equals("Problem with connecting to MongoDB"))
+        {
+            Toast.makeText(getApplicationContext(), "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+        }
+
         else
         {
             Toast.makeText(getApplicationContext(),

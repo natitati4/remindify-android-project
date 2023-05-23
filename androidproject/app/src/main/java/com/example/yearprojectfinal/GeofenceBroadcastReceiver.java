@@ -68,7 +68,8 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver
                 ArrayList<LocationClass> locationsList = UtilityClass.getLocationListForUser(className, connectedUsername);
 
                 if (locationsList == null)
-                    Toast.makeText(context, "Remindify: Server did not respond", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Remindify: Server did not respond Server did" +
+                                                " not respond or problem with database", Toast.LENGTH_SHORT).show();
 
                 LocationClass notifiedLocation = findNotifiedLocationByGeofenceId(triggeredGeofences, locationsList);
 

@@ -126,6 +126,12 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
                 Toast.makeText(getApplicationContext(),
                         "Username already exists.", Toast.LENGTH_SHORT).show();
             }
+
+            else if (resultStr.equals("Problem with connecting to MongoDB"))
+            {
+                Toast.makeText(this, "Problem with connecting to database", Toast.LENGTH_SHORT).show();
+            }
+
             // something unexpected failed
             else
             {
@@ -154,6 +160,11 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         if (resultStr.equals("failed to get user details") || resultStr.equals(""))
         {
             Toast.makeText(this, "Failed to get user details", Toast.LENGTH_SHORT).show();
+        }
+
+        else if (resultStr.equals("Problem with connecting to MongoDB"))
+        {
+            Toast.makeText(this, "Problem with connecting to database", Toast.LENGTH_SHORT).show();
         }
 
         else
